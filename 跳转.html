@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div{
+            height: 100px;
+            border: 1px solid #0099ff;
+            line-height: 100px;
+            text-align: center;
+            font-size: 50px;
+        }
+
+    </style>
+</head>
+<!--制作一个倒计时5秒的页面，事件显示为0跳转淘宝网-->
+<body>
+    <div id="div">
+        <span id="span">5</span>秒后跳转到淘宝
+    </div>
+<script>
+    var n=5;
+    function tiao() {
+        n--;
+        if(n==0){
+            location.href="http://www.taobao.com"
+        }else {
+            document.getElementById("span").innerHTML=n;
+        }
+    }
+    tiao();
+    setInterval(tiao,1000)
+</script>
+</body>
+</html>
